@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3837E80BA26266861EB59711 /* Pods_Button_Link.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64546852AABF7C557E45BA72 /* Pods_Button_Link.framework */; };
 		578E79E12646781A00A7F669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E79E02646781A00A7F669 /* AppDelegate.swift */; };
 		578E79E32646781A00A7F669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E79E22646781A00A7F669 /* SceneDelegate.swift */; };
 		578E79E52646781A00A7F669 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 578E79E42646781A00A7F669 /* StartViewController.swift */; };
@@ -24,6 +25,9 @@
 		578E79E92646781A00A7F669 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		578E79EC2646781A00A7F669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		578E79EE2646781A00A7F669 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64546852AABF7C557E45BA72 /* Pods_Button_Link.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Button_Link.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2A30903C30C28BFAEB76AB6 /* Pods-Button Link.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Button Link.debug.xcconfig"; path = "Target Support Files/Pods-Button Link/Pods-Button Link.debug.xcconfig"; sourceTree = "<group>"; };
+		DE35BBEEB24310D36AE08668 /* Pods-Button Link.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Button Link.release.xcconfig"; path = "Target Support Files/Pods-Button Link/Pods-Button Link.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3837E80BA26266861EB59711 /* Pods_Button_Link.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2881EEA700DA7CC58F2961A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64546852AABF7C557E45BA72 /* Pods_Button_Link.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		29A869C75A45AD22A3A9A6C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2A30903C30C28BFAEB76AB6 /* Pods-Button Link.debug.xcconfig */,
+				DE35BBEEB24310D36AE08668 /* Pods-Button Link.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		578E79D42646781A00A7F669 = {
 			isa = PBXGroup;
 			children = (
 				578E79DF2646781A00A7F669 /* Button Link */,
 				578E79DE2646781A00A7F669 /* Products */,
+				29A869C75A45AD22A3A9A6C5 /* Pods */,
+				2881EEA700DA7CC58F2961A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,9 +130,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 578E79F12646781A00A7F669 /* Build configuration list for PBXNativeTarget "Button Link" */;
 			buildPhases = (
+				ADD594A5DDE5BAD1F8501E54 /* [CP] Check Pods Manifest.lock */,
 				578E79D92646781A00A7F669 /* Sources */,
 				578E79DA2646781A00A7F669 /* Frameworks */,
 				578E79DB2646781A00A7F669 /* Resources */,
+				508CC88CDCD528E993669B78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +156,7 @@
 				TargetAttributes = {
 					578E79DC2646781A00A7F669 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -163,6 +190,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		508CC88CDCD528E993669B78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Button Link/Pods-Button Link-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Button Link/Pods-Button Link-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Button Link/Pods-Button Link-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADD594A5DDE5BAD1F8501E54 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Button Link-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		578E79D92646781A00A7F669 /* Sources */ = {
@@ -315,9 +384,11 @@
 		};
 		578E79F22646781A00A7F669 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2A30903C30C28BFAEB76AB6 /* Pods-Button Link.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BC275ZBJ2Z;
 				INFOPLIST_FILE = "Button Link/Info.plist";
@@ -327,6 +398,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.isconfig.Button-Link";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,9 +406,11 @@
 		};
 		578E79F32646781A00A7F669 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE35BBEEB24310D36AE08668 /* Pods-Button Link.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BC275ZBJ2Z;
 				INFOPLIST_FILE = "Button Link/Info.plist";

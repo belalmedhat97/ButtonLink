@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import youtube_ios_player_helper
 class StartViewController: UIViewController {
     
    
@@ -16,7 +16,17 @@ class StartViewController: UIViewController {
         // Do any additional setup after loading the view.
         linkBut.layer.cornerRadius = 10
         linkBut.clipsToBounds = true
+        or.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        or.layer.borderWidth = 1
+        or.layer.cornerRadius = 10
+        or.clipsToBounds = true
+        YTVideoPlayer.delegate = self
+        YTVideoPlayer.load(withVideoId: "m0QQ-hWs8fc", playerVars: ["playsinline": "1"])
+
+      
     }
+    @IBOutlet weak var or: UILabel!
+    @IBOutlet weak var YTVideoPlayer: YTPlayerView!
     @IBOutlet weak var linkBut: UIButton!
     @IBAction func linkButton(_ sender: UIButton) {
         openUrl()
@@ -30,4 +40,10 @@ class StartViewController: UIViewController {
     }
 
 }
+extension StartViewController: YTPlayerViewDelegate {
+    func playerViewPreferredWebViewBackgroundColor(_ playerView: YTPlayerView) -> UIColor {
+        return UIColor.black
+    }
+    
 
+}
