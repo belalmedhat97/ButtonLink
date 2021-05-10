@@ -1,6 +1,0 @@
-framework module Pods_Button_Link {
-  umbrella header "Pods-Button Link-umbrella.h"
-
-  export *
-  module * { export * }
-}
